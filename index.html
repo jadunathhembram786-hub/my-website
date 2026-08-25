@@ -1,0 +1,2671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Botany Notes | B.Sc. Botany Study Notebook</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Patrick+Hand&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+:root{
+    --blue:#0757c8;
+    --blue-dark:#043d91;
+    --black:#111111;
+    --gray:#555;
+    --light-blue:#eaf3ff;
+    --line:#cbdcf5;
+    --paper:#ffffff;
+    --success:#16834c;
+    --danger:#b42318;
+    --shadow:5px 5px 0 #111;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:#fff;
+    color:var(--black);
+    line-height:1.75;
+}
+
+button,
+input,
+select{
+    font:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+a{
+    color:inherit;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#fff;
+    border-bottom:2px solid #111;
+    padding:18px 6%;
+}
+
+.header-inner{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:25px;
+}
+
+.logo{
+    text-decoration:none;
+    font-family:"Caveat",cursive;
+    font-size:2.4rem;
+    color:var(--blue);
+    font-weight:700;
+    white-space:nowrap;
+}
+
+.nav{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+}
+
+.nav a{
+    text-decoration:none;
+    font-family:"Patrick Hand",cursive;
+    font-size:1.25rem;
+}
+
+.nav a:hover{
+    color:var(--blue);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:84vh;
+    max-width:1400px;
+    margin:auto;
+    padding:90px 6%;
+    display:grid;
+    grid-template-columns:1.3fr .7fr;
+    gap:50px;
+    align-items:center;
+}
+
+.eyebrow{
+    font-family:"Patrick Hand",cursive;
+    color:var(--blue);
+    font-size:1.6rem;
+    margin-bottom:10px;
+}
+
+.hero h1{
+    font-family:"Caveat",cursive;
+    font-size:clamp(4rem,8vw,7.5rem);
+    color:var(--blue);
+    line-height:.9;
+    margin-bottom:30px;
+}
+
+.hero p{
+    max-width:700px;
+    font-size:1.05rem;
+    color:#333;
+}
+
+.hero-actions{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.btn{
+    border:2px solid #111;
+    background:#fff;
+    color:#111;
+    padding:11px 22px;
+    text-decoration:none;
+    font-family:"Patrick Hand",cursive;
+    font-size:1.25rem;
+    transition:.2s;
+}
+
+.btn:hover{
+    background:var(--blue);
+    border-color:var(--blue);
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+.btn.primary{
+    background:var(--blue);
+    color:#fff;
+    border-color:var(--blue);
+}
+
+.btn.primary:hover{
+    background:var(--blue-dark);
+}
+
+/* =========================================================
+   BOTANICAL ILLUSTRATION
+========================================================= */
+
+.botanical-drawing{
+    position:relative;
+    height:400px;
+    width:350px;
+    margin:auto;
+}
+
+.stem{
+    position:absolute;
+    left:50%;
+    bottom:20px;
+    width:7px;
+    height:320px;
+    background:#111;
+    transform:translateX(-50%) rotate(3deg);
+    border-radius:10px;
+}
+
+.leaf{
+    position:absolute;
+    width:135px;
+    height:70px;
+    border:4px solid var(--blue);
+    background:#fff;
+    border-radius:100% 0 100% 0;
+}
+
+.leaf::after{
+    content:"";
+    position:absolute;
+    left:5px;
+    top:32px;
+    width:118px;
+    height:2px;
+    background:#111;
+    transform:rotate(-5deg);
+}
+
+.l1{
+    left:12px;
+    top:90px;
+    transform:rotate(-22deg);
+}
+
+.l2{
+    right:5px;
+    top:130px;
+    transform:scaleX(-1) rotate(-22deg);
+}
+
+.l3{
+    left:0;
+    top:215px;
+    transform:rotate(-20deg);
+}
+
+.l4{
+    right:0;
+    top:255px;
+    transform:scaleX(-1) rotate(-22deg);
+}
+
+.flower{
+    position:absolute;
+    left:50%;
+    top:15px;
+    transform:translateX(-50%);
+    font-size:75px;
+    color:var(--blue);
+}
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+section{
+    padding:80px 6%;
+}
+
+.section-inner{
+    max-width:1400px;
+    margin:auto;
+}
+
+.section-title{
+    font-family:"Caveat",cursive;
+    color:var(--blue);
+    font-size:3.8rem;
+    line-height:1;
+    margin-bottom:10px;
+}
+
+.section-subtitle{
+    color:#666;
+    margin-bottom:35px;
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.stat{
+    border:2px solid #111;
+    padding:24px;
+    text-align:center;
+    background:#fff;
+}
+
+.stat-number{
+    color:var(--blue);
+    font-family:"Caveat",cursive;
+    font-size:3rem;
+    font-weight:700;
+}
+
+.stat-label{
+    font-family:"Patrick Hand",cursive;
+    font-size:1.3rem;
+}
+
+/* =========================================================
+   SEARCH + FILTERS
+========================================================= */
+
+.study-toolbar{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:12px;
+    margin-bottom:30px;
+}
+
+.search,
+.filter{
+    border:2px solid #111;
+    background:#fff;
+    padding:13px 15px;
+    outline:none;
+}
+
+.search:focus,
+.filter:focus{
+    border-color:var(--blue);
+}
+
+/* =========================================================
+   UNIT TABS
+========================================================= */
+
+.unit-tabs{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.unit-tab{
+    border:2px solid #111;
+    background:#fff;
+    padding:9px 18px;
+    font-family:"Patrick Hand",cursive;
+    font-size:1.2rem;
+}
+
+.unit-tab.active,
+.unit-tab:hover{
+    background:var(--blue);
+    color:#fff;
+    border-color:var(--blue);
+}
+
+/* =========================================================
+   TOPIC GRID
+========================================================= */
+
+.topic-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.topic-card{
+    position:relative;
+    border:2px solid #111;
+    background:#fff;
+    padding:28px;
+    min-height:300px;
+    display:flex;
+    flex-direction:column;
+    transition:.2s;
+}
+
+.topic-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+}
+
+.topic-card h3{
+    font-family:"Patrick Hand",cursive;
+    color:var(--blue);
+    font-size:1.9rem;
+    line-height:1.2;
+    margin-bottom:10px;
+}
+
+.topic-card p{
+    color:#444;
+}
+
+.topic-meta{
+    margin-top:15px;
+    font-size:.9rem;
+    color:#777;
+}
+
+.topic-actions{
+    margin-top:auto;
+    padding-top:20px;
+    display:flex;
+    gap:10px;
+}
+
+.small-btn{
+    border:2px solid #111;
+    background:#fff;
+    padding:7px 13px;
+    font-family:"Patrick Hand",cursive;
+    font-size:1.05rem;
+}
+
+.small-btn:hover{
+    background:#111;
+    color:#fff;
+}
+
+.small-btn.blue{
+    border-color:var(--blue);
+    color:var(--blue);
+}
+
+.small-btn.blue:hover{
+    background:var(--blue);
+    color:#fff;
+}
+
+/* =========================================================
+   NOTEBOOK PAPER
+========================================================= */
+
+.notebook-section{
+    border-top:2px solid #111;
+    border-bottom:2px solid #111;
+}
+
+.paper{
+    max-width:1050px;
+    margin:auto;
+    border:2px solid #111;
+    padding:45px;
+    background:
+      repeating-linear-gradient(
+        to bottom,
+        #fff 0,
+        #fff 34px,
+        var(--line) 35px
+      );
+    position:relative;
+}
+
+.paper::before{
+    content:"";
+    position:absolute;
+    left:48px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:#d55;
+    opacity:.45;
+}
+
+.paper-content{
+    padding-left:35px;
+}
+
+.paper h2{
+    font-family:"Caveat",cursive;
+    font-size:3.5rem;
+    color:var(--blue);
+    margin-bottom:20px;
+}
+
+.paper h3{
+    font-family:"Patrick Hand",cursive;
+    color:var(--blue);
+    font-size:2rem;
+    margin-top:28px;
+}
+
+.paper p{
+    margin-bottom:14px;
+}
+
+.paper ul,
+.paper ol{
+    margin-left:25px;
+    margin-bottom:14px;
+}
+
+.paper li{
+    margin-bottom:8px;
+}
+
+.definition{
+    border-left:5px solid var(--blue);
+    padding:12px 18px;
+    background:rgba(234,243,255,.7);
+    margin:20px 0;
+}
+
+.formula{
+    text-align:center;
+    font-family:"Caveat",cursive;
+    color:var(--blue);
+    font-size:2rem;
+    padding:15px;
+}
+
+/* =========================================================
+   DIAGRAM
+========================================================= */
+
+.diagram{
+    border:2px dashed #111;
+    margin:25px 0;
+    padding:25px;
+    text-align:center;
+    background:#fff;
+}
+
+.diagram-title{
+    font-family:"Patrick Hand",cursive;
+    color:var(--blue);
+    font-size:1.6rem;
+    margin-bottom:20px;
+}
+
+.diagram-flow{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.diagram-box{
+    border:2px solid var(--blue);
+    padding:10px 18px;
+    font-family:"Patrick Hand",cursive;
+    color:var(--blue);
+    font-size:1.15rem;
+}
+
+.arrow{
+    color:#111;
+    font-size:1.5rem;
+}
+
+/* =========================================================
+   QUESTIONS
+========================================================= */
+
+.questions-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.question-box{
+    border:2px solid #111;
+    padding:28px;
+}
+
+.question-box h3{
+    color:var(--blue);
+    font-family:"Patrick Hand",cursive;
+    font-size:1.8rem;
+    margin-bottom:15px;
+}
+
+.question-box ol{
+    margin-left:25px;
+}
+
+.question-box li{
+    margin-bottom:12px;
+}
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+.quiz-wrap{
+    max-width:900px;
+    margin:auto;
+}
+
+.quiz-card{
+    border:2px solid #111;
+    padding:35px;
+}
+
+.quiz-question{
+    font-family:"Patrick Hand",cursive;
+    color:var(--blue);
+    font-size:1.8rem;
+    margin-bottom:22px;
+}
+
+.option{
+    display:block;
+    width:100%;
+    text-align:left;
+    border:2px solid #111;
+    background:#fff;
+    padding:13px 15px;
+    margin-bottom:10px;
+}
+
+.option:hover{
+    border-color:var(--blue);
+    color:var(--blue);
+}
+
+.option.correct{
+    border-color:var(--success);
+    color:var(--success);
+    background:#eefbf5;
+}
+
+.option.wrong{
+    border-color:var(--danger);
+    color:var(--danger);
+    background:#fff2f0;
+}
+
+.quiz-result{
+    margin-top:20px;
+    font-family:"Patrick Hand",cursive;
+    font-size:1.5rem;
+}
+
+/* =========================================================
+   BOOKMARKS / PROGRESS
+========================================================= */
+
+.bookmark-list{
+    display:grid;
+    gap:12px;
+}
+
+.bookmark-item{
+    border:2px solid #111;
+    padding:15px 18px;
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    align-items:center;
+}
+
+.bookmark-item span{
+    font-family:"Patrick Hand",cursive;
+    color:var(--blue);
+    font-size:1.3rem;
+}
+
+.progress-wrap{
+    max-width:800px;
+}
+
+.progress-track{
+    width:100%;
+    height:22px;
+    border:2px solid #111;
+    background:#fff;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+    width:0%;
+    background:var(--blue);
+    transition:.5s;
+}
+
+.progress-text{
+    margin-top:10px;
+    font-family:"Patrick Hand",cursive;
+    font-size:1.3rem;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.58);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    z-index:2000;
+}
+
+.modal.open{
+    display:flex;
+}
+
+.modal-box{
+    width:min(1000px,100%);
+    max-height:90vh;
+    overflow:auto;
+    background:#fff;
+    border:2px solid #111;
+    padding:35px;
+    position:relative;
+}
+
+.modal-close{
+    position:absolute;
+    right:18px;
+    top:12px;
+    border:0;
+    background:none;
+    font-size:2rem;
+}
+
+.modal-box h2{
+    font-family:"Caveat",cursive;
+    color:var(--blue);
+    font-size:3.2rem;
+    padding-right:40px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    border-top:2px solid #111;
+    text-align:center;
+    padding:35px 6%;
+}
+
+footer p{
+    font-family:"Patrick Hand",cursive;
+    font-size:1.3rem;
+}
+
+footer span{
+    color:var(--blue);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1000px){
+
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero p{
+        margin:auto;
+    }
+
+    .hero-actions{
+        justify-content:center;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .topic-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .study-toolbar{
+        grid-template-columns:1fr;
+    }
+
+    .questions-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:650px){
+
+    .header-inner{
+        flex-direction:column;
+    }
+
+    .nav{
+        justify-content:center;
+    }
+
+    .hero{
+        padding-top:55px;
+    }
+
+    .botanical-drawing{
+        transform:scale(.8);
+    }
+
+    .stats,
+    .topic-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:60px 5%;
+    }
+
+    .paper{
+        padding:25px;
+    }
+
+    .paper-content{
+        padding-left:20px;
+    }
+
+    .paper::before{
+        left:26px;
+    }
+
+    .modal-box{
+        padding:25px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+<div class="header-inner">
+
+    <a href="#home" class="logo">
+        Botany Notes 🌿
+    </a>
+
+    <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#units">Units</a>
+        <a href="#notes">Notes</a>
+        <a href="#questions">Questions</a>
+        <a href="#quiz">MCQs</a>
+        <a href="#progress">Progress</a>
+    </nav>
+
+</div>
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero" id="home">
+
+<div>
+
+    <div class="eyebrow">
+        ✎ B.Sc. Botany Digital Notebook
+    </div>
+
+    <h1>
+        Learn Plants.<br>
+        Understand Life.
+    </h1>
+
+    <p>
+        Welcome to your digital Botany notebook. Study detailed
+        concepts, revise important questions, test yourself with
+        MCQs, bookmark difficult topics and keep track of your
+        learning progress — all in one place.
+    </p>
+
+    <div class="hero-actions">
+        <a href="#units" class="btn primary">
+            Start Studying
+        </a>
+
+        <a href="#quiz" class="btn">
+            Take a Quiz
+        </a>
+    </div>
+
+</div>
+
+
+<div class="botanical-drawing">
+
+    <div class="flower">✿</div>
+    <div class="stem"></div>
+
+    <div class="leaf l1"></div>
+    <div class="leaf l2"></div>
+    <div class="leaf l3"></div>
+    <div class="leaf l4"></div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     STATISTICS
+========================================================= -->
+
+<section>
+
+<div class="section-inner">
+
+<div class="stats">
+
+    <div class="stat">
+        <div class="stat-number" id="unitCount">2</div>
+        <div class="stat-label">Units</div>
+    </div>
+
+    <div class="stat">
+        <div class="stat-number" id="topicCount">6</div>
+        <div class="stat-label">Major Topics</div>
+    </div>
+
+    <div class="stat">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Important Points</div>
+    </div>
+
+    <div class="stat">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">MCQs</div>
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     UNITS / TOPICS
+========================================================= -->
+
+<section id="units">
+
+<div class="section-inner">
+
+<h2 class="section-title">
+    My Botany Syllabus
+</h2>
+
+<p class="section-subtitle">
+    Select a unit or search for a particular concept.
+</p>
+
+
+<div class="study-toolbar">
+
+    <input
+        type="text"
+        id="searchInput"
+        class="search"
+        placeholder="🔍 Search topics, keywords or concepts..."
+    >
+
+    <select id="unitFilter" class="filter">
+        <option value="all">All Units</option>
+        <option value="unit1">Unit 1 — Plant-Water Relations</option>
+        <option value="unit2">Unit 2 — Mineral Nutrition</option>
+    </select>
+
+    <select id="levelFilter" class="filter">
+        <option value="all">All Levels</option>
+        <option value="basic">Basic</option>
+        <option value="important">Important</option>
+        <option value="exam">Exam Focus</option>
+    </select>
+
+</div>
+
+
+<div class="topic-grid" id="topicGrid">
+
+
+<!-- TOPIC 1 -->
+
+<article class="topic-card"
+data-unit="unit1"
+data-level="important"
+data-keywords="water plant water importance water potential">
+
+<h3>
+    01. Importance of Water
+</h3>
+
+<p>
+    Understand the physical and physiological importance
+    of water in plant life, including hydration, metabolism,
+    photosynthesis, transport and cell turgidity.
+</p>
+
+<div class="topic-meta">
+    Unit 1 • Important
+</div>
+
+<div class="topic-actions">
+
+    <button
+        class="small-btn blue"
+        onclick="openNote('waterImportance')">
+        Read Notes
+    </button>
+
+    <button
+        class="small-btn"
+        onclick="toggleBookmark('waterImportance','Importance of Water')">
+        ☆ Bookmark
+    </button>
+
+</div>
+
+</article>
+
+
+<!-- TOPIC 2 -->
+
+<article class="topic-card"
+data-unit="unit1"
+data-level="exam"
+data-keywords="water potential solute pressure matric potential">
+
+<h3>
+    02. Water Potential
+</h3>
+
+<p>
+    Learn water potential, its components and the role of
+    pressure potential and solute potential in determining
+    the movement of water through plant tissues.
+</p>
+
+<div class="topic-meta">
+    Unit 1 • Exam Focus
+</div>
+
+<div class="topic-actions">
+
+    <button
+        class="small-btn blue"
+        onclick="openNote('waterPotential')">
+        Read Notes
+    </button>
+
+    <button
+        class="small-btn"
+        onclick="toggleBookmark('waterPotential','Water Potential')">
+        ☆ Bookmark
+    </button>
+
+</div>
+
+</article>
+
+
+<!-- TOPIC 3 -->
+
+<article class="topic-card"
+data-unit="unit1"
+data-level="exam"
+data-keywords="transpiration stomata cuticle water loss transpiration pull">
+
+<h3>
+    03. Transpiration
+</h3>
+
+<p>
+    Study the process of transpiration, types of transpiration,
+    stomatal mechanism, significance and the factors that
+    affect the rate of water loss.
+</p>
+
+<div class="topic-meta">
+    Unit 1 • Exam Focus
+</div>
+
+<div class="topic-actions">
+
+    <button
+        class="small-btn blue"
+        onclick="openNote('transpiration')">
+        Read Notes
+    </button>
+
+    <button
+        class="small-btn"
+        onclick="toggleBookmark('transpiration','Transpiration')">
+        ☆ Bookmark
+    </button>
+
+</div>
+
+</article>
+
+
+<!-- TOPIC 4 -->
+
+<article class="topic-card"
+data-unit="unit1"
+data-level="important"
+data-keywords="root pressure guttation hydathodes bleeding">
+
+<h3>
+    04. Root Pressure & Guttation
+</h3>
+
+<p>
+    Learn how roots can generate positive pressure and how
+    guttation occurs through hydathodes, especially under
+    conditions of high soil moisture and low transpiration.
+</p>
+
+<div class="topic-meta">
+    Unit 1 • Important
+</div>
+
+<div class="topic-actions">
+
+    <button
+        class="small-btn blue"
+        onclick="openNote('rootPressure')">
+        Read Notes
+    </button>
+
+    <button
+        class="small-btn"
+        onclick="toggleBookmark('rootPressure','Root Pressure & Guttation')">
+        ☆ Bookmark
+    </button>
+
+</div>
+
+</article>
+
+
+<!-- TOPIC 5 -->
+
+<article class="topic-card"
+data-unit="unit2"
+data-level="important"
+data-keywords="mineral nutrition essential elements macro micronutrients nitrogen phosphorus potassium">
+
+<h3>
+    05. Essential Mineral Elements
+</h3>
+
+<p>
+    Study essential elements, criteria for essentiality,
+    macronutrients, micronutrients and the physiological
+    roles of major mineral nutrients.
+</p>
+
+<div class="topic-meta">
+    Unit 2 • Important
+</div>
+
+<div class="topic-actions">
+
+    <button
+        class="small-btn blue"
+        onclick="openNote('essentialElements')">
+        Read Notes
+    </button>
+
+    <button
+        class="small-btn"
+        onclick="toggleBookmark('essentialElements','Essential Mineral Elements')">
+        ☆ Bookmark
+    </button>
+
+</div>
+
+</article>
+
+
+<!-- TOPIC 6 -->
+
+<article class="topic-card"
+data-unit="unit2"
+data-level="exam"
+data-keywords="ion transport membrane active passive carriers channels pumps proton pump sugar translocation">
+
+<h3>
+    06. Transport of Ions & Sugar Translocation
+</h3>
+
+<p>
+    Understand passive and active transport, membrane
+    carriers, channels, pumps and the pressure-flow model
+    of translocation through phloem.
+</p>
+
+<div class="topic-meta">
+    Unit 2 • Exam Focus
+</div>
+
+<div class="topic-actions">
+
+    <button
+        class="small-btn blue"
+        onclick="openNote('ionTransport')">
+        Read Notes
+    </button>
+
+    <button
+        class="small-btn"
+        onclick="toggleBookmark('ionTransport','Ion Transport & Sugar Translocation')">
+        ☆ Bookmark
+    </button>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================================
+     NOTEBOOK
+========================================================= -->
+
+<section class="notebook-section" id="notes">
+
+<div class="section-inner">
+
+<h2 class="section-title">
+    Detailed Notes ✎
+</h2>
+
+<p class="section-subtitle">
+    Detailed explanations written in exam-friendly language.
+</p>
+
+
+<div class="paper">
+
+<div class="paper-content">
+
+<h2>
+Plant-Water Relations
+</h2>
+
+<div class="definition">
+
+<strong>Basic idea:</strong>
+Water is fundamental to plant life. It functions as a solvent,
+reactant, transport medium and structural component, and its
+movement through the plant is governed by differences in water
+potential.
+
+</div>
+
+
+<h3>
+Why is water important to plants?
+</h3>
+
+<p>
+Water is one of the most abundant and physiologically important
+components of living plant cells. In actively growing tissues,
+water may constitute a very large proportion of the fresh weight.
+It provides the aqueous environment in which biochemical reactions
+take place and allows dissolved minerals, sugars and other
+substances to move from one region of the plant to another.
+</p>
+
+<p>
+Water is also essential for maintaining cell turgidity. When water
+enters a plant cell, the vacuole expands and the protoplast presses
+against the cell wall, producing turgor pressure. This pressure
+helps maintain the shape of herbaceous tissues and provides
+mechanical support.
+</p>
+
+<h3>
+Physiological functions of water
+</h3>
+
+<ul>
+<li>
+Water acts as an important solvent for inorganic salts,
+sugars, gases and many other substances.
+</li>
+
+<li>
+It participates directly in photosynthesis and several
+hydrolytic reactions.
+</li>
+
+<li>
+It is involved in the transport of minerals from roots to
+shoots and the movement of organic materials through phloem.
+</li>
+
+<li>
+Water maintains the hydration state of proteins, membranes
+and protoplasmic structures.
+</li>
+
+<li>
+Evaporation of water during transpiration contributes to
+cooling of leaves.
+</li>
+</ul>
+
+
+<h3>
+Water Potential
+</h3>
+
+<p>
+Water potential is a measure of the tendency of water to move
+from one region to another. Pure water under standard reference
+conditions is assigned a water potential of zero. The presence
+of dissolved substances or pressure changes this value.
+</p>
+
+<div class="formula">
+Ψw = Ψs + Ψp + Ψm
+</div>
+
+<p>
+Where Ψw is water potential, Ψs is solute potential, Ψp is pressure
+potential and Ψm is matric potential. In many simple plant-water
+problems, matric potential is small and may be ignored.
+</p>
+
+<h3>
+Transpiration
+</h3>
+
+<p>
+Transpiration is the loss of water from the aerial parts of plants
+in the form of water vapour. Most transpiration occurs through
+stomata, although smaller amounts occur through the cuticle and
+lenticels.
+</p>
+
+<p>
+The major physiological importance of transpiration is associated
+with the development of the transpiration pull, which contributes
+to the upward movement of water through the xylem.
+</p>
+
+<h3>
+Factors affecting transpiration
+</h3>
+
+<ul>
+<li>
+<strong>Light:</strong> Light generally promotes stomatal opening,
+thereby increasing transpiration.
+</li>
+
+<li>
+<strong>Temperature:</strong> Higher temperature generally
+increases evaporation and may increase transpiration.
+</li>
+
+<li>
+<strong>Humidity:</strong> High atmospheric humidity lowers the
+water-vapour gradient and usually reduces transpiration.
+</li>
+
+<li>
+<strong>Wind:</strong> Moderate wind can remove humid air from
+the leaf surface and increase water loss.
+</li>
+
+<li>
+<strong>Leaf characteristics:</strong> Cuticle thickness,
+stomatal number, leaf area and orientation strongly affect
+water loss.
+</li>
+</ul>
+
+<div class="diagram">
+
+<div class="diagram-title">
+Water Movement Through a Plant
+</div>
+
+<div class="diagram-flow">
+
+<div class="diagram-box">Soil</div>
+
+<div class="arrow">→</div>
+
+<div class="diagram-box">Root Hair</div>
+
+<div class="arrow">→</div>
+
+<div class="diagram-box">Cortex</div>
+
+<div class="arrow">→</div>
+
+<div class="diagram-box">Xylem</div>
+
+<div class="arrow">→</div>
+
+<div class="diagram-box">Leaf</div>
+
+<div class="arrow">→</div>
+
+<div class="diagram-box">Atmosphere</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     QUESTIONS
+========================================================= -->
+
+<section id="questions">
+
+<div class="section-inner">
+
+<h2 class="section-title">
+    Important Questions
+</h2>
+
+<p class="section-subtitle">
+    Useful for short answers, long answers and university examinations.
+</p>
+
+
+<div class="questions-grid">
+
+<div class="question-box">
+
+<h3>
+Unit 1 — Short & Medium Answers
+</h3>
+
+<ol>
+<li>Define water potential.</li>
+<li>Explain the components of water potential.</li>
+<li>What is transpiration?</li>
+<li>Describe stomatal transpiration.</li>
+<li>What is root pressure?</li>
+<li>Define guttation and explain its cause.</li>
+<li>Write the significance of transpiration.</li>
+<li>Differentiate transpiration and guttation.</li>
+</ol>
+
+</div>
+
+
+<div class="question-box">
+
+<h3>
+Unit 1 — Long Answers
+</h3>
+
+<ol>
+<li>
+Explain the importance of water in plants.
+</li>
+
+<li>
+Describe water potential and explain its different components.
+</li>
+
+<li>
+Discuss transpiration, its mechanism, significance and
+the factors affecting it.
+</li>
+
+<li>
+Explain root pressure and guttation with suitable examples.
+</li>
+</ol>
+
+</div>
+
+
+<div class="question-box">
+
+<h3>
+Unit 2 — Mineral Nutrition
+</h3>
+
+<ol>
+<li>What are essential elements?</li>
+<li>Distinguish macronutrients and micronutrients.</li>
+<li>Explain the criteria of essentiality.</li>
+<li>Discuss the role of nitrogen in plants.</li>
+<li>Explain the functions of phosphorus and potassium.</li>
+<li>What are ion channels?</li>
+<li>Differentiate active and passive transport.</li>
+</ol>
+
+</div>
+
+
+<div class="question-box">
+
+<h3>
+Unit 2 — High-Priority Long Answers
+</h3>
+
+<ol>
+<li>
+Explain essential mineral elements and their physiological roles.
+</li>
+
+<li>
+Describe active and passive transport of ions across the
+plasma membrane.
+</li>
+
+<li>
+Explain carriers, channels and pumps with suitable examples.
+</li>
+
+<li>
+Describe sugar translocation through phloem using the
+pressure-flow hypothesis.
+</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     QUIZ
+========================================================= -->
+
+<section id="quiz">
+
+<div class="section-inner">
+
+<h2 class="section-title">
+    Test Yourself 🧠
+</h2>
+
+<p class="section-subtitle">
+    Choose the best answer. Your score is saved in this browser.
+</p>
+
+
+<div class="quiz-wrap">
+
+<div class="quiz-card">
+
+<div id="quizQuestion" class="quiz-question">
+    Loading question...
+</div>
+
+<div id="quizOptions"></div>
+
+<div id="quizResult" class="quiz-result"></div>
+
+<button
+    id="nextQuestion"
+    class="btn primary"
+    style="margin-top:20px;display:none;">
+    Next Question →
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     BOOKMARKS
+========================================================= -->
+
+<section>
+
+<div class="section-inner">
+
+<h2 class="section-title">
+    My Bookmarks ⭐
+</h2>
+
+<p class="section-subtitle">
+    Your saved topics stay here even after refreshing the page.
+</p>
+
+<div id="bookmarkList" class="bookmark-list">
+
+    <p id="noBookmarks">
+        No bookmarks yet. Save an important topic to see it here.
+    </p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     PROGRESS
+========================================================= -->
+
+<section id="progress">
+
+<div class="section-inner">
+
+<h2 class="section-title">
+    Study Progress
+</h2>
+
+<p class="section-subtitle">
+    Mark topics as completed and watch your notebook grow.
+</p>
+
+<div class="progress-wrap">
+
+<div class="progress-track">
+    <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<div class="progress-text" id="progressText">
+    0% completed
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section>
+
+<div class="section-inner">
+
+<h2 class="section-title">
+    About This Website
+</h2>
+
+<p>
+This digital notebook is designed for Botany students who want
+more than scattered notes. The aim is to keep the syllabus,
+detailed explanations, revision questions, practice tests and
+personal study progress together in one clean workspace.
+</p>
+
+<p style="margin-top:15px;">
+The handwritten blue headings imitate a student's notebook,
+while the white page keeps the interface clean and easy to read.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+<p>
+Made with <span>🌿 curiosity</span>,
+patience and a little plant magic.
+</p>
+
+</footer>
+
+
+<!-- =========================================================
+     MODAL
+========================================================= -->
+
+<div class="modal" id="noteModal">
+
+<div class="modal-box">
+
+<button
+    class="modal-close"
+    onclick="closeModal()">
+    ×
+</button>
+
+<div id="modalContent"></div>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   NOTE DATABASE
+========================================================= */
+
+const notes = {
+
+waterImportance: {
+
+title:"Importance of Water",
+
+html:`
+
+<h3>Introduction</h3>
+
+<p>
+Water is indispensable for plant growth and survival.
+It is absorbed mainly by roots and distributed through
+the vascular system. Water influences almost every major
+physiological process of a plant.
+</p>
+
+<h3>1. Water as a solvent</h3>
+
+<p>
+Water dissolves mineral salts, sugars, gases and many
+other substances. Because most cellular reactions occur
+in aqueous environments, water provides the medium for
+metabolism.
+</p>
+
+<h3>2. Water in photosynthesis</h3>
+
+<p>
+Water serves as a raw material in photosynthesis. During
+the light reactions, water is oxidised and contributes
+electrons and protons, with oxygen released as a by-product.
+</p>
+
+<h3>3. Maintenance of turgidity</h3>
+
+<p>
+Entry of water into plant cells produces turgor pressure.
+Turgid cells provide mechanical support to non-woody tissues
+and help maintain the normal structure of leaves and stems.
+</p>
+
+<h3>4. Transport</h3>
+
+<p>
+Water acts as the main medium for the movement of mineral
+nutrients through the xylem and contributes to the movement
+of soluble organic compounds within the plant.
+</p>
+
+<h3>5. Temperature regulation</h3>
+
+<p>
+Evaporation of water through transpiration removes heat from
+leaf surfaces and helps prevent excessive overheating.
+</p>
+
+<h3>Exam conclusion</h3>
+
+<p>
+Thus, water is not simply a raw material for plants.
+It is simultaneously a solvent, reactant, transport medium,
+structural component and regulator of temperature.
+</p>
+
+`
+
+},
+
+waterPotential: {
+
+title:"Water Potential",
+
+html:`
+
+<h3>Definition</h3>
+
+<p>
+Water potential represents the free-energy status of water
+and predicts the direction in which water will move.
+Water generally moves from a region of higher water potential
+towards a region of lower water potential.
+</p>
+
+<div class="formula">
+Ψw = Ψs + Ψp + Ψm
+</div>
+
+<h3>Solute Potential (Ψs)</h3>
+
+<p>
+Solute potential is the reduction in water potential caused
+by dissolved substances. Addition of solutes lowers the free
+energy of water, therefore solute potential is generally
+negative.
+</p>
+
+<h3>Pressure Potential (Ψp)</h3>
+
+<p>
+Pressure potential represents the physical pressure exerted
+on water. In living plant cells, positive pressure is commonly
+associated with turgor.
+</p>
+
+<h3>Matric Potential (Ψm)</h3>
+
+<p>
+Matric potential arises from interactions between water and
+surfaces such as cell walls and colloidal materials. It may
+be important in dry seeds and soils.
+</p>
+
+<h3>Direction of water movement</h3>
+
+<p>
+If two regions have different water potentials, water tends
+to move from the region with less negative or higher water
+potential toward the region with more negative or lower
+water potential.
+</p>
+
+<h3>Importance</h3>
+
+<ul>
+<li>Explains water absorption by roots.</li>
+<li>Helps understand cell-to-cell water movement.</li>
+<li>Explains movement of water through xylem.</li>
+<li>Provides a physical basis for plant water relations.</li>
+</ul>
+
+`
+
+},
+
+transpiration: {
+
+title:"Transpiration",
+
+html:`
+
+<h3>Definition</h3>
+
+<p>
+Transpiration is the loss of water in the form of vapour
+from the aerial parts of plants. Most transpiration occurs
+through stomata.
+</p>
+
+<h3>Types of transpiration</h3>
+
+<ul>
+<li><strong>Stomatal transpiration:</strong> occurs through stomata.</li>
+<li><strong>Cuticular transpiration:</strong> occurs through the cuticle.</li>
+<li><strong>Lenticular transpiration:</strong> occurs through lenticels.</li>
+</ul>
+
+<h3>Mechanism</h3>
+
+<p>
+Water evaporates from moist cell surfaces inside the leaf and
+then diffuses into the intercellular spaces and finally into
+the atmosphere through open stomata.
+</p>
+
+<h3>Significance</h3>
+
+<ul>
+<li>Creates transpiration pull.</li>
+<li>Assists mineral transport.</li>
+<li>Cools the plant body.</li>
+<li>Supports continuous xylem water movement.</li>
+</ul>
+
+<h3>Factors affecting transpiration</h3>
+
+<ul>
+<li>Light intensity</li>
+<li>Temperature</li>
+<li>Relative humidity</li>
+<li>Wind velocity</li>
+<li>Soil-water availability</li>
+<li>Leaf area and stomatal characteristics</li>
+<li>Thickness of cuticle</li>
+</ul>
+
+<h3>Exam point</h3>
+
+<p>
+Transpiration causes water loss, but it is physiologically
+important because it contributes to cooling and to the movement
+of water and dissolved mineral nutrients through the plant.
+</p>
+
+`
+
+},
+
+rootPressure: {
+
+title:"Root Pressure and Guttation",
+
+html:`
+
+<h3>Root Pressure</h3>
+
+<p>
+Root pressure is the positive pressure that develops within
+the xylem of roots due to the accumulation of solutes and
+water uptake. It is particularly noticeable when transpiration
+is low and the soil contains adequate water.
+</p>
+
+<h3>Formation</h3>
+
+<p>
+Active uptake and accumulation of mineral ions in the xylem
+lower its water potential. Water then enters the xylem by
+osmosis and generates positive hydrostatic pressure.
+</p>
+
+<h3>Importance</h3>
+
+<p>
+Root pressure can help in the upward movement of water over
+short distances and can contribute to phenomena such as
+bleeding from cut stems.
+</p>
+
+<h3>Guttation</h3>
+
+<p>
+Guttation is the loss of liquid water from the margins or tips
+of leaves, usually through specialised structures called
+hydathodes.
+</p>
+
+<h3>Conditions favouring guttation</h3>
+
+<ul>
+<li>High soil moisture</li>
+<li>High root pressure</li>
+<li>Low transpiration</li>
+<li>High atmospheric humidity</li>
+</ul>
+
+<h3>Guttation vs Transpiration</h3>
+
+<p>
+Guttation involves the loss of liquid water, whereas
+transpiration involves the loss of water in the form of vapour.
+</p>
+
+`
+
+},
+
+essentialElements: {
+
+title:"Essential Mineral Elements",
+
+html:`
+
+<h3>Definition</h3>
+
+<p>
+An essential mineral element is a mineral nutrient required
+for the normal growth, development and completion of the life
+cycle of a plant. If the element is absent, the plant cannot
+complete its life cycle normally.
+</p>
+
+<h3>Criteria of essentiality</h3>
+
+<ol>
+<li>
+The element must be necessary for normal growth and completion
+of the life cycle.
+</li>
+
+<li>
+Its requirement must be specific and cannot be completely
+replaced by another element.
+</li>
+
+<li>
+The element must participate directly in plant metabolism or
+have a clearly defined physiological role.
+</li>
+</ol>
+
+<h3>Macronutrients</h3>
+
+<p>
+Macronutrients are required in comparatively large amounts.
+They include nitrogen, phosphorus, potassium, calcium, magnesium
+and sulfur.
+</p>
+
+<h3>Micronutrients</h3>
+
+<p>
+Micronutrients are required in very small quantities but are
+still essential. They include iron, manganese, zinc, copper,
+boron, molybdenum, chlorine and nickel.
+</p>
+
+<h3>Functions of selected nutrients</h3>
+
+<ul>
+
+<li>
+<strong>Nitrogen:</strong> component of amino acids, proteins,
+nucleic acids and chlorophyll.
+</li>
+
+<li>
+<strong>Phosphorus:</strong> important in ATP, nucleic acids and
+phospholipid metabolism.
+</li>
+
+<li>
+<strong>Potassium:</strong> contributes to enzyme activation,
+osmotic regulation and stomatal function.
+</li>
+
+<li>
+<strong>Magnesium:</strong> central atom of the chlorophyll
+molecule and activator of enzymes.
+</li>
+
+<li>
+<strong>Iron:</strong> involved in electron transfer and
+chlorophyll synthesis.
+</li>
+
+</ul>
+
+`
+
+},
+
+ionTransport: {
+
+title:"Ion Transport and Sugar Translocation",
+
+html:`
+
+<h3>Ion Transport</h3>
+
+<p>
+Plants must absorb mineral ions from the soil and distribute
+them to cells and tissues. Because the plasma membrane is
+selectively permeable, specific proteins regulate the movement
+of ions.
+</p>
+
+<h3>Passive Transport</h3>
+
+<p>
+Passive transport does not require direct expenditure of
+metabolic energy. Ions move down their electrochemical gradient.
+Channels provide selective pathways through the membrane.
+</p>
+
+<h3>Active Transport</h3>
+
+<p>
+Active transport requires energy and can move ions against
+their electrochemical gradient. Pumps use energy, commonly
+from ATP hydrolysis or ion gradients, to establish and maintain
+membrane gradients.
+</p>
+
+<h3>Carriers</h3>
+
+<p>
+Carrier proteins bind specific ions or molecules and undergo
+conformational changes that move the bound substance across
+the membrane.
+</p>
+
+<h3>Channels</h3>
+
+<p>
+Ion channels are membrane proteins that form pores through
+which selected ions can move rapidly down their
+electrochemical gradients.
+</p>
+
+<h3>Pumps</h3>
+
+<p>
+Pumps are transport proteins that use energy to establish
+electrochemical gradients. Plasma-membrane proton pumps are
+particularly important in plant cells.
+</p>
+
+<h3>Sugar Translocation</h3>
+
+<p>
+Organic solutes, particularly sucrose, are translocated
+through the phloem from source tissues to sink tissues.
+Mature photosynthetic leaves are commonly sources, while roots,
+developing fruits, seeds and young tissues may function as sinks.
+</p>
+
+<h3>Pressure-Flow Hypothesis</h3>
+
+<p>
+According to the pressure-flow hypothesis, sucrose loading at
+the source increases osmotic concentration in the phloem.
+Water enters from the xylem, producing high hydrostatic pressure.
+At the sink, sucrose is unloaded and water may return to the
+xylem. The pressure gradient drives bulk flow through the phloem.
+</p>
+
+<div class="diagram">
+
+<div class="diagram-title">
+Pressure-Flow Model
+</div>
+
+<div class="diagram-flow">
+
+<div class="diagram-box">
+Source<br>
+Leaf
+</div>
+
+<div class="arrow">→</div>
+
+<div class="diagram-box">
+Phloem<br>
+High Pressure
+</div>
+
+<div class="arrow">→</div>
+
+<div class="diagram-box">
+Sink<br>
+Root / Fruit
+</div>
+
+</div>
+
+</div>
+
+`
+
+}
+
+};
+
+
+/* =========================================================
+   MODAL FUNCTIONS
+========================================================= */
+
+function openNote(id){
+
+    const note = notes[id];
+
+    if(!note) return;
+
+    document.getElementById("modalContent").innerHTML = `
+        <h2>${note.title}</h2>
+        ${note.html}
+    `;
+
+    document.getElementById("noteModal").classList.add("open");
+}
+
+function closeModal(){
+
+    document.getElementById("noteModal").classList.remove("open");
+}
+
+document.getElementById("noteModal").addEventListener("click", function(e){
+
+    if(e.target === this){
+        closeModal();
+    }
+
+});
+
+
+/* =========================================================
+   SEARCH / FILTER
+========================================================= */
+
+const searchInput = document.getElementById("searchInput");
+const unitFilter = document.getElementById("unitFilter");
+const levelFilter = document.getElementById("levelFilter");
+
+const cards = [...document.querySelectorAll(".topic-card")];
+
+function filterTopics(){
+
+    const search =
+        searchInput.value.toLowerCase().trim();
+
+    const unit =
+        unitFilter.value;
+
+    const level =
+        levelFilter.value;
+
+    cards.forEach(card => {
+
+        const text =
+            card.textContent.toLowerCase();
+
+        const keywords =
+            (card.dataset.keywords || "").toLowerCase();
+
+        const matchesSearch =
+            !search ||
+            text.includes(search) ||
+            keywords.includes(search);
+
+        const matchesUnit =
+            unit === "all" ||
+            card.dataset.unit === unit;
+
+        const matchesLevel =
+            level === "all" ||
+            card.dataset.level === level;
+
+        card.style.display =
+            matchesSearch && matchesUnit && matchesLevel
+            ? "flex"
+            : "none";
+
+    });
+}
+
+searchInput.addEventListener("input", filterTopics);
+unitFilter.addEventListener("change", filterTopics);
+levelFilter.addEventListener("change", filterTopics);
+
+
+/* =========================================================
+   BOOKMARK SYSTEM
+========================================================= */
+
+function getBookmarks(){
+
+    try{
+        return JSON.parse(
+            localStorage.getItem("botanyBookmarks") || "[]"
+        );
+    }
+    catch{
+        return [];
+    }
+}
+
+function saveBookmarks(items){
+
+    localStorage.setItem(
+        "botanyBookmarks",
+        JSON.stringify(items)
+    );
+}
+
+function toggleBookmark(id,title){
+
+    const items = getBookmarks();
+
+    const exists =
+        items.some(item => item.id === id);
+
+    if(exists){
+
+        const filtered =
+            items.filter(item => item.id !== id);
+
+        saveBookmarks(filtered);
+
+    }else{
+
+        items.push({
+            id,
+            title
+        });
+
+        saveBookmarks(items);
+    }
+
+    renderBookmarks();
+}
+
+function renderBookmarks(){
+
+    const list =
+        document.getElementById("bookmarkList");
+
+    const empty =
+        document.getElementById("noBookmarks");
+
+    const items = getBookmarks();
+
+    list.innerHTML = "";
+
+    if(items.length === 0){
+
+        list.appendChild(empty);
+
+        return;
+    }
+
+    items.forEach(item => {
+
+        const div =
+            document.createElement("div");
+
+        div.className = "bookmark-item";
+
+        div.innerHTML = `
+            <span>⭐ ${item.title}</span>
+
+            <div>
+
+                <button
+                    class="small-btn blue"
+                    onclick="openNote('${item.id}')">
+                    Open
+                </button>
+
+                <button
+                    class="small-btn"
+                    onclick="toggleBookmark('${item.id}','${item.title.replace(/'/g,"\\'")}')">
+                    Remove
+                </button>
+
+            </div>
+        `;
+
+        list.appendChild(div);
+
+    });
+}
+
+renderBookmarks();
+
+
+/* =========================================================
+   COMPLETION SYSTEM
+========================================================= */
+
+const completedTopics =
+    new Set(
+        JSON.parse(
+            localStorage.getItem("botanyCompleted") || "[]"
+        )
+    );
+
+function updateProgress(){
+
+    const total = cards.length;
+
+    const completed =
+        [...completedTopics].length;
+
+    const percentage =
+        total
+        ? Math.round((completed / total) * 100)
+        : 0;
+
+    document.getElementById("progressBar").style.width =
+        percentage + "%";
+
+    document.getElementById("progressText").textContent =
+        `${percentage}% completed — ${completed} of ${total} topics finished.`;
+}
+
+function markCompleted(id){
+
+    if(completedTopics.has(id)){
+
+        completedTopics.delete(id);
+
+    }else{
+
+        completedTopics.add(id);
+    }
+
+    localStorage.setItem(
+        "botanyCompleted",
+        JSON.stringify([...completedTopics])
+    );
+
+    updateProgress();
+}
+
+updateProgress();
+
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+const questions = [
+
+{
+    question:"Which component of water potential represents the effect of dissolved solutes?",
+    options:[
+        "Pressure potential",
+        "Solute potential",
+        "Matric potential",
+        "Turgor potential"
+    ],
+    answer:1
+},
+
+{
+    question:"Most transpiration in plants occurs through:",
+    options:[
+        "Roots",
+        "Lenticels",
+        "Stomata",
+        "Xylem"
+    ],
+    answer:2
+},
+
+{
+    question:"Guttation generally involves the loss of:",
+    options:[
+        "Water vapour",
+        "Liquid water",
+        "Sucrose",
+        "Mineral salts only"
+    ],
+    answer:1
+},
+
+{
+    question:"Which of the following is a macronutrient?",
+    options:[
+        "Zinc",
+        "Copper",
+        "Nitrogen",
+        "Molybdenum"
+    ],
+    answer:2
+},
+
+{
+    question:"Which structure is primarily responsible for stomatal gas exchange?",
+    options:[
+        "Guard cells",
+        "Hydathodes",
+        "Root hairs",
+        "Trichomes"
+    ],
+    answer:0
+},
+
+{
+    question:"Active transport generally requires:",
+    options:[
+        "No energy",
+        "Metabolic energy",
+        "Only sunlight",
+        "Only oxygen"
+    ],
+    answer:1
+},
+
+{
+    question:"Sugars are mainly translocated through:",
+    options:[
+        "Xylem",
+        "Phloem",
+        "Epidermis",
+        "Cork"
+    ],
+    answer:1
+},
+
+{
+    question:"The central atom in chlorophyll is:",
+    options:[
+        "Iron",
+        "Calcium",
+        "Magnesium",
+        "Potassium"
+    ],
+    answer:2
+}
+
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+
+const quizQuestion =
+    document.getElementById("quizQuestion");
+
+const quizOptions =
+    document.getElementById("quizOptions");
+
+const quizResult =
+    document.getElementById("quizResult");
+
+const nextButton =
+    document.getElementById("nextQuestion");
+
+function loadQuestion(){
+
+    const q = questions[quizIndex];
+
+    quizQuestion.textContent =
+        `Q${quizIndex+1}. ${q.question}`;
+
+    quizOptions.innerHTML = "";
+
+    quizResult.textContent = "";
+
+    nextButton.style.display = "none";
+
+    q.options.forEach((option,index) => {
+
+        const button =
+            document.createElement("button");
+
+        button.className = "option";
+
+        button.textContent = option;
+
+        button.addEventListener("click", () => {
+
+            selectAnswer(index);
+
+        });
+
+        quizOptions.appendChild(button);
+
+    });
+}
+
+function selectAnswer(selected){
+
+    const q = questions[quizIndex];
+
+    const options =
+        [...document.querySelectorAll(".option")];
+
+    options.forEach(button => {
+        button.disabled = true;
+    });
+
+    if(selected === q.answer){
+
+        options[selected].classList.add("correct");
+
+        quizScore++;
+
+        quizResult.textContent =
+            "✓ Correct! Nicely done.";
+
+    }else{
+
+        options[selected].classList.add("wrong");
+        options[q.answer].classList.add("correct");
+
+        quizResult.textContent =
+            `✗ Not quite. The correct answer is "${q.options[q.answer]}".`;
+    }
+
+    nextButton.style.display = "inline-block";
+}
+
+nextButton.addEventListener("click", () => {
+
+    quizIndex++;
+
+    if(quizIndex >= questions.length){
+
+        quizQuestion.textContent =
+            "🌿 Quiz Complete!";
+
+        quizOptions.innerHTML = "";
+
+        quizResult.textContent =
+            `You scored ${quizScore} out of ${questions.length}.`;
+
+        nextButton.textContent = "Restart Quiz";
+
+        nextButton.onclick = () => {
+
+            quizIndex = 0;
+            quizScore = 0;
+            nextButton.textContent = "Next Question →";
+            nextButton.onclick = null;
+            loadQuestion();
+
+        };
+
+        return;
+    }
+
+    loadQuestion();
+
+});
+
+loadQuestion();
+
+
+/* =========================================================
+   CLOSE MODAL WITH ESC
+========================================================= */
+
+document.addEventListener("keydown", e => {
+
+    if(e.key === "Escape"){
+        closeModal();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
